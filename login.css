@@ -121,3 +121,18 @@ header{
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
 }
+
+.forgot-password{
+    text-align: center;
+    margin-top: 250px;
+    margin-left: -100px;
+}
+.forgot-password a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+.forgot-password a:hover {
+    color: #99d2eb;
+}

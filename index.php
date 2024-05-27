@@ -48,7 +48,7 @@ if (isset($_SESSION["user_id"])) {
             </a>
             <div class="p-style"><p>-- or --</p></div>
             <a href="signup.html">
-            <input type="submit" class="log-out" value="Sign Up">
+                <input type="submit" class="log-out" value="Sign Up">
             </a>
     <?php endif; ?> 
     

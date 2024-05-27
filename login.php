@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     $user = $result->fetch_assoc();
     
-    if ($user) {
+    if ($user && $user["account_activation_hash"] === null) {
         
         if (password_verify($_POST["password"], $user["password_hash"])) {
             
@@ -69,6 +69,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
 
         </form>
+
+        <div class="forgot-password">
+            <a href="forgot-password.php">Forgot password?</a>
+        </div>
+        
 
     </div>
 </div>
