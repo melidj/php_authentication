@@ -24,8 +24,12 @@ if (isset($_SESSION["user_id"])) {
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+
+<div class="register-container" id="register">
     
     <header>Home</header>
+
+    <div class="form-box">
     
     <?php if (isset($user)): ?>
         
@@ -42,15 +46,19 @@ if (isset($_SESSION["user_id"])) {
         </div>
 
     <?php else: ?>
-        <div class="button-container">
+        <div class="container">
             <a href="login.php">
-                <input type="submit" class="log-out" value="Log In">
+                <input type="submit" class="re-loggin" value="Log In">
             </a>
-            <div class="p-style"><p>-- or --</p></div>
+            
             <a href="signup.html">
-                <input type="submit" class="log-out" value="Sign Up">
+                <input type="submit" class="re-loggin" value="Sign Up">
             </a>
     <?php endif; ?> 
+
+    </div>
+
+</div>
     
     
 </body>

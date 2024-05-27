@@ -1,52 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-* {
+*{  
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-
-
-
-body {
-    background: #f0f3fa url('./images/images.jpg');
+body{
+    background: url("images/images.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
     background-position: center;
-    background-size: cover;
+    overflow: hidden; 
 }
 
-.register-container {
+.register-container{
     background: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    backdrop-filter: blur(10px);
     padding: 40px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-form {
+.form-box{
     display: flex;
     flex-direction: column;
 }
-
-header {
+header{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
 }
-
 .input-box {
     position: relative;
     margin-bottom: 20px;
 }
-
-.input-field {
+.input-field{
     width: 100%;
     padding: 10px;
     border-radius: 10px;
@@ -55,31 +56,61 @@ header {
     backdrop-filter: blur(5px);
     color: #333;
 }
-
 .input-field:focus {
     outline: none;
     background: rgba(255, 255, 255, 0.5);
 }
+.input-field:hover, .input-field:focus{
+    background: #ffd9e6;
+    transition: 0.5s;
+}
 
-.input-box i {
+.input-box i{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 15px;
     color: #666;
 }
-
-.submit {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    background: #007bff;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
+.input-box:hover i {
+    display: none;
+    transition: 2s;
 }
 
-.submit:hover {
-    background: #0056b3;
+.submit{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.submit:hover{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 540px){
+    .form-box{
+        width: 100%;
+        height: 500px;
+    }
+    .register-container, .login-container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .register-container .form-box{
+        flex-direction: column;
+        gap: 0;
+    }
+}
+.redirect-login{
+    color: #330d1a;
+    font-size: 25px;
 }

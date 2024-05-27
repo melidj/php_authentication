@@ -55,6 +55,13 @@ $stmt = $mysqli->prepare($sql);
 
 $stmt->bind_param("ss", $password_hash, $user["id"]);
 
-$stmt->execute();
-
-echo "Password updated. You can now login.";
+if ($stmt->execute()){
+    header("Location: reset-success.html");
+    exit;
+}else{
+    if ($mysqli->errno === 1062) {
+        die("Password cannot be reset");
+    } else {
+        die($mysqli->error . " " . $mysqli->errno);
+    }
+}
