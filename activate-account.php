@@ -40,7 +40,7 @@ $stmt->execute();
 <head>
     <title>Account Activated</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
@@ -48,10 +48,12 @@ $stmt->execute();
     <header>
         Signup Successful!
     </header>
-
+    
     <div class="redirect-login">
-        <p>Account activated successfully. You can now
-       <a href="login.php">Log in</a>.</p>
+        <p>Account activated successfully. You can now</p>
+        <a href="login.php">
+            <input type="submit" class="log-out" value="Log In">
+        </a>
     </div>
       
 </div>
